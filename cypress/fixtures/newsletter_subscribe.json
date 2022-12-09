@@ -1,0 +1,32 @@
+[
+    {
+        "description": "Subscribe with new and proper email address",
+        "emailAddress": "test@test.com",
+        "randomizeAddress": true,
+        "expectedMessage": "Subscribed Successfully"
+    },
+    {
+        "description": "Tries to use already subscribed email address",
+        "emailAddress": "test@test.com",
+        "randomizeAddress": false,
+        "expectedMessage": "Already Subscribed"
+    },
+    {
+        "description": "Tries to use email address without 'at' sign",
+        "emailAddress": "test.at.test.com",
+        "randomizeAddress": false,
+        "expectedMessage": "Kindly Enter a Valid Email Address.\n"
+    },
+    {
+        "description": "Tries to use email address with improper domain",
+        "emailAddress": "test@test",
+        "randomizeAddress": false,
+        "expectedMessage": "Kindly Enter a Valid Email Address.\n"
+    },
+    {
+        "description": "Tries to use single 'at' sign",
+        "emailAddress": "@",
+        "randomizeAddress": false,
+        "expectedMessage": "Kindly Enter a Valid Email Address.\n"
+    }
+]
