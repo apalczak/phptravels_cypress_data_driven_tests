@@ -1,0 +1,29 @@
+[
+    {
+        "description": "Submit Contact Us form with a proper data",
+        "name": "John Doe",
+        "email": "test@test.com",
+        "subject": "New subject",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "expectedMessage": "Message Sent Successfully",
+        "expectedAlertStyle": "alert-success"
+    },
+    {
+        "description": "Submit Contact Us form with empty message textfield",
+        "name": "John Doe",
+        "email": "test@test.com",
+        "subject": "New subject",
+        "message": "",
+        "expectedMessage": "The Message field is required.",
+        "expectedAlertStyle": "alert-danger"
+    },
+    {
+        "description": "Submit Contact Us form with email address with improper domain",
+        "name": "John Doe",
+        "email": "test@test",
+        "subject": "New subject",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "expectedMessage": "The Email field must contain a valid email address.",
+        "expectedAlertStyle": "alert-danger"
+    }
+]
