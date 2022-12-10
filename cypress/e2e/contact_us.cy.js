@@ -2,7 +2,7 @@
 
 const tests = require("../fixtures/contact_us.json");
 
-describe("Newsletter subscribe", () => {
+describe("Contact Us form", () => {
     beforeEach(() => {
         cy.visit("/contact-us");
     });

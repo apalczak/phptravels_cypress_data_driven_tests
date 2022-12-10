@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("typeLoginFormField", (xpathLocator, inputString) => {
+    cy.xpath(xpathLocator).scrollIntoView().clear().type(inputString);
+});

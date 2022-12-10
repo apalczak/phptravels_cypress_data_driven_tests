@@ -1,0 +1,28 @@
+[
+    {
+        "description": "Try to login with proper username and password",
+        "username": "user@phptravels.com",
+        "password": "demouser",
+        "expectedMessage": "Hi, Johny Smith",
+        "expectedDropdownOption": "Logout",
+        "shouldLogin": true
+    },
+    {
+        "description": "Try to login with proper username and invalid password",
+        "username": "user@phptravels.com",
+        "password": "wrongpassword",
+        "expectedMessage": "Invalid Email or Password",
+        "shouldLogin": false,
+        "expectedDropdownOption": "Login",
+        "expectedAlertStyle": "alert-danger"
+    },
+    {
+        "description": "Try to login with proper username and without password",
+        "username": "user@phptravels.com",
+        "password": "",
+        "expectedMessage": "Invalid Email or Password",
+        "expectedDropdownOption": "Login",
+        "shouldLogin": false,
+        "expectedAlertStyle": "alert-danger"
+    }
+]
