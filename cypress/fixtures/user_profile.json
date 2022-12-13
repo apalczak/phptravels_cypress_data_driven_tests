@@ -1,0 +1,115 @@
+[
+    {
+        "name": "Changes user phone number",
+        "fields": [
+            { "name": "phone", "newValue": "654321", "passwordField": false }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "Profile Updated Successfully."
+    },
+    {
+        "name": "Deletes user phone number",
+        "fields": [{ "name": "phone", "newValue": "", "passwordField": false }],
+        "dropdowns": [],
+        "expectedMessage": "Profile Updated Successfully.",
+        "negativeCase": true
+    },
+    {
+        "name": "Changes user password",
+        "fields": [
+            {
+                "name": "password",
+                "newValue": "demouser1",
+                "passwordField": true
+            },
+            {
+                "name": "confirmpassword",
+                "newValue": "demouser1",
+                "passwordField": true
+            }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "Profile Updated Successfully."
+    },
+    {
+        "name": "Unable to change user password without password confirmation",
+        "fields": [
+            {
+                "name": "password",
+                "newValue": "demouser1",
+                "passwordField": true
+            },
+            {
+                "name": "confirmpassword",
+                "newValue": "",
+                "passwordField": true
+            }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "The Password field is required.\n",
+        "negativeCase": true
+    },
+    {
+        "name": "Changes user email address",
+        "fields": [
+            {
+                "name": "email",
+                "newValue": "user1@phptravels.com",
+                "passwordField": false
+            }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "Profile Updated Successfully."
+    },
+    {
+        "name": "Unable to change user email address to string without @ sign",
+        "fields": [
+            {
+                "name": "email",
+                "newValue": "user.at.phptravels.com",
+                "passwordField": false
+            }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "The Email field must contain a valid email address.\n",
+        "negativeCase": true
+    },
+    {
+        "name": "Unable to change user email address to address without domain",
+        "fields": [
+            {
+                "name": "email",
+                "newValue": "user@phptravels",
+                "passwordField": false
+            }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "The Email field must contain a valid email address.\n",
+        "negativeCase": true
+    },
+    {
+        "name": "Changes user postal address",
+        "fields": [
+            { "name": "address1", "newValue": "Unit A01 Thong khan kham" },
+            { "name": "address2", "newValue": "Asean Rd" },
+            { "name": "state", "newValue": "Chanthabuly District" },
+            { "name": "city", "newValue": "Vientiane" },
+            { "name": "zip", "newValue": "12345" }
+        ],
+        "dropdowns": [{ "name": "country", "newValue": "Laos" }],
+        "expectedMessage": "Profile Updated Successfully."
+    },
+    {
+        "name": "Deletes user postal address",
+        "fields": [
+            { "name": "address1", "newValue": "" },
+            { "name": "address2", "newValue": "" },
+            { "name": "state", "newValue": "" },
+            { "name": "city", "newValue": "" },
+            { "name": "zip", "newValue": "" }
+        ],
+        "dropdowns": [],
+        "expectedMessage": "All fields should be filled in.",
+        "negativeCase": true
+    }
+]

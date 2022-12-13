@@ -1,0 +1,14 @@
+{
+    "inputFields": [
+        { "name": "phone", "previousValue": "123456" },
+        { "name": "email", "previousValue": "user@phptravels.com" },
+        { "name": "password", "previousValue": "demouser" },
+        { "name": "confirmpassword", "previousValue": "demouser" },
+        { "name": "address1", "previousValue": "R2, Avenue du Maroc" },
+        { "name": "address2", "previousValue": "" },
+        { "name": "state", "previousValue": "" },
+        { "name": "city", "previousValue": "" },
+        { "name": "zip", "previousValue": "52000" }
+    ],
+    "dropdowns": [{ "name": "country", "previousValue": "Morocco" }]
+}
